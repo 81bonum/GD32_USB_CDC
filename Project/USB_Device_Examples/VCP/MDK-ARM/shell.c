@@ -44,7 +44,16 @@
 	void		usb_out(char *pString);
 	void 		Delay(uint32_t nTime);
 	void		printcan1(void);
+	
+	struct Buffer_Data {
+		char setting;
+		char mask_one;
+		char mask_two;
+		char setting_speed;
+		char crc;
+	}
 
+	Buffer_Data inform[4];
 //---------------------------------------------------------------------------------------------------
 //печать принятого сообщения Can 1
 //
@@ -115,13 +124,48 @@ void	printcan1(void)
 	void config_adapter(void)
 	{
 		
-		int i;
-		for (i = 0; i < 36; i += 4 )
-		{
-			uint8_t *p = &USB_DATA_Buffer[i];
-			USB_Send_Data(*p);
-		}
+		inform[0].setting = USB_DATA_Buffer[20];
+		inform[1].setting = USB_DATA_Buffer[21];
+		inform[2].setting = USB_DATA_Buffer[22];
+		inform[3].setting = USB_DATA_Buffer[23];
 		
+		inform[0].mask_one = USB_DATA_Buffer[24];
+		inform[1].mask_one = USB_DATA_Buffer[25];
+		inform[2].mask_one = USB_DATA_Buffer[26];
+		inform[3].mask_one = USB_DATA_Buffer[27];
+		
+		inform[0].mask_two = USB_DATA_Buffer[28];
+		inform[1].mask_two = USB_DATA_Buffer[29];
+		inform[2].mask_two = USB_DATA_Buffer[30];
+		inform[3].mask_two = USB_DATA_Buffer[31];
+		
+		inform[0].setting_speed = USB_DATA_Buffer[32];
+		inform[1].setting_speed = USB_DATA_Buffer[33];
+		inform[2].setting_speed = USB_DATA_Buffer[34];
+		
+		inform[0].crc = USB_DATA_Buffer[35];
+		
+		for (int index = 0; index < 35; ++index) {
+			USB_DATA_Buffer[index] = 0;
+		}
+	}
+	
+	int getSpeed() {
+		if (inform[2].setting_speed == '41') {
+			return 300;
+		}
+		else if (inform[2].setting_speed == '43') {
+			return 150;
+		}
+		else if (inform[2].setting_speed == '45') {
+			return 100;
+		}
+		else if (inform[2].setting_speed == '4B') {
+			return 50;
+		}
+		else if (inform[2].setting_speed == '5D') {
+			return 20;
+		}
 	}
 	
 //---------------------------------------------------------------------------------------------------
