@@ -42,17 +42,19 @@
 	#define CAN1_Periph				RCC_APB2PERIPH_GPIOB	// ???? ?????????
 #endif
 
+extern int getSpeed();
+
 // ????? ???????? ????
 // ?????????? ????????????????? ?????? ??????
 // #define CAN1_SPEED_PRESCALE			2						// 750 Kb
 // #define CAN1_SPEED_PRESCALE			3					  // 500 Kb
-	 #define CAN1_SPEED_PRESCALE	 		5						// 300 Kb
+//	 #define CAN1_SPEED_PRESCALE	 		5						// 300 Kb
 // #define CAN1_SPEED_PRESCALE			10					// 150 Kb
 // #define CAN1_SPEED_PRESCALE			15					// 100 Kb
 // #define CAN1_SPEED_PRESCALE			30					// 50 Kb
 // #define CAN1_SPEED_PRESCALE			75					// 20 Kb
 // #define CAN1_SPEED_PRESCALE			150					// 10 Kb
-
+#define CAN1_SPEED_PRESCALE getSpeed();
 
 
 
