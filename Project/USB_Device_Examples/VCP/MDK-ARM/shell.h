@@ -10,6 +10,8 @@ extern	char 		string[];
 extern	CanRxMessage RxMessage;
 extern 	CanTxMessage TxMessage;
 
+
+void config_adapter(void);
 void	printcan1(void);
 void Delay(uint32_t nTime);
 void initargv(void);

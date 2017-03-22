@@ -3,6 +3,7 @@
 #include	"gd32f10x_can.h"
 #include <stdint.h>
 #include <string.h>
+#include <stdio.h>
 
 //uint8_t halfbyte_to_hexascii(uint8_t _halfbyte)
 //{
@@ -43,7 +44,6 @@
 	void		usb_out(char *pString);
 	void 		Delay(uint32_t nTime);
 	void		printcan1(void);
-
 
 //---------------------------------------------------------------------------------------------------
 //печать принятого сообщения Can 1
@@ -112,6 +112,18 @@ void	printcan1(void)
 	
 	}
 //---------------------------------------------------------------------------------------------------
+	void config_adapter(void)
+	{
+		
+		int i;
+		for (i = 0; i < 36; i += 4 )
+		{
+			uint8_t *p = &USB_DATA_Buffer[i];
+			USB_Send_Data(*p);
+		}
+		
+	}
+	
 //---------------------------------------------------------------------------------------------------
 void Delay(uint32_t nTime)
 {

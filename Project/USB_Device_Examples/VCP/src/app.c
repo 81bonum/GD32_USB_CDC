@@ -68,6 +68,7 @@ int main(void)
 			while(1)	
 				
 				{
+	//			config_adapter();
 //					if(arg_happy==1)
 //					{
 //						selectargv(argv[0]);				//обработаем аргументы

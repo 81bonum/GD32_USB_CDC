@@ -41,7 +41,7 @@
     #define APP_RX_DATA_SIZE                512 /* Total size of IN buffer: 
                                                  APP_RX_DATA_SIZE*8/MAX_BAUDARATE*1000 should be > CDC_IN_FRAME_INTERVAL*8 */
 #else
-    #define USB_CDC_DATA_PACKET_SIZE        512   /* Endpoint IN & OUT Packet size */
+    #define USB_CDC_DATA_PACKET_SIZE        64   /* Endpoint IN & OUT Packet size */
     #define USB_CDC_CMD_PACKET_SIZE         8   /* Control Endpoint Packet size */
 
     #define CDC_IN_FRAME_INTERVAL           5    /* Number of frames between IN transfers */
