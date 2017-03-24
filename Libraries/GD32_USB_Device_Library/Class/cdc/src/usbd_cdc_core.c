@@ -544,8 +544,8 @@ static uint8_t  USBD_CDC_DataOut (void *pudev, uint8_t EpID)
               USB_DATA_Buffer,
               CDC_DATA_OUT_PACKET_SIZE);
 
-	
-	CDC_DataTx(USB_DATA_Buffer, USB_Rx_Cnt);
+		
+//		CDC_DataTx(APP_DATA_Buffer, USB_Rx_Cnt);
     return USBD_OK;
 }
 
