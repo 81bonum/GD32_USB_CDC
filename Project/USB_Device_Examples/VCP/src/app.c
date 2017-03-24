@@ -63,40 +63,14 @@ int main(void)
 			uint16_t Count = 0;
 			LEDs_init();
 			init_CAN();
-			
 	
-			while(1)	
-				
-				{
-	//			config_adapter();
-//					if(arg_happy==1)
-//					{
-//						selectargv(argv[0]);				//обработаем аргументы
-//						initargv();									//очистим аргументы
-//						arg_happy=0;								//сбросим признак необходимости обработки аргументов
-//					}
-//					
-//					if (can1_resive0 == 1)
-//					{
-//						printcan1();
-//						can1_resive0=0;
-//					}
-					
-//					if (Count == 0xffff)
-//					{
-//						Count = 0;
-//						usb_out("abcd");
-//					} else {
-//						Count ++;
-//					}
-					
-//					if (Count == 0xffff)
-//						{
-//							Count = 0;
-//							CAN_Send_Test();
-//						} else {
-//							Count++;
-//						}
+			while(1)		
+				{		
+					if (can1_resive0 == 1)
+					{
+						printcan1();
+						can1_resive0=0;
+					}
 				}
 
 }
