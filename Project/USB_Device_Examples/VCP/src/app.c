@@ -20,7 +20,7 @@
 #include "can_init.h"
 #include "hw_config.h"
 #include "shell.h"
-
+#include <stdbool.h>
 
 /* Private variables ---------------------------------------------------------*/
 USB_OTG_CORE_HANDLE USB_OTG_dev;
@@ -63,14 +63,27 @@ int main(void)
 			uint16_t Count = 0;
 			LEDs_init();
 			init_CAN();
+			bool flag = true;
 	
-			while(1)		
+			uint8_t end[3];
+			end[0] = 0x30;
+			end[1] = 0x0A;
+			end[2] = 0x0D;
+	
+			while(true)		
 				{		
-					if (can1_resive0 == 1)
+					//Delay(1000000);
+					if (flag) {
+						getConfPacked();
+						flag = false;
+						CDC_DataTx(end, 3);
+					}
+					//CDC_DataTx(end, 3);
+					/*if (can1_resive0 == 1)
 					{
 						printcan1();
 						can1_resive0=0;
-					}
+					}*/
 				}
 
 }
