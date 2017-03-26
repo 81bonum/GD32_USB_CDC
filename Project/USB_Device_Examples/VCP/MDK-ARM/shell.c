@@ -156,7 +156,9 @@ void	printcan1(void)
 void Delay(uint32_t nTime)
 {
   TimingDelay = nTime;
-  while(TimingDelay != 0); 
+  while(TimingDelay != 0) {
+		TimingDelay -= 1;
+	}
 }
 //---------------------------------------------------------------------------------------------------
 
