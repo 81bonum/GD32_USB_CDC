@@ -1,4 +1,9 @@
 *.[oa]
+*.d
+*.axf
+*.map
+*.dep
+*.htm
 *.crf
 *.bak
 *.User
