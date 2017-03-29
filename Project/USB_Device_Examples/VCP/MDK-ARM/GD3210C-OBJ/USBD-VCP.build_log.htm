@@ -8,67 +8,41 @@ Project File Date:  03/10/2017
 
 <h2>Output:</h2>
 Build target 'GD3210C-EVAL_USBD-VCP'
+compiling app.c...
+..\MDK-ARM\shell.h(20): warning:  #1-D: last line of file ends without a newline
+  int getSpeed();
+..\MDK-ARM\shell.h(20): warning:  #1295-D: Deprecated declaration getSpeed - give arg types
+  int getSpeed();
+..\MDK-ARM\shell.h(20): warning:  #1-D: last line of file ends without a newline
+  int getSpeed();
+..\MDK-ARM\shell.h(20): warning:  #1295-D: Deprecated declaration getSpeed - give arg types
+  int getSpeed();
+..\src\app.c(53): warning:  #177-D: variable "Count" was declared but never referenced
+                        uint16_t Count = 0;
+..\src\app.c: 5 warnings, 0 errors
 compiling shell.c...
-shell.h(17): warning:  #1-D: last line of file ends without a newline
-  int   putinbuffer(uint8_t     data);
-shell.c(53): warning:  #177-D: variable "sdsl" was declared but never referenced
-                        char    sdsh,sdsl;
-shell.c: 2 warnings, 0 errors
+shell.h(20): warning:  #1-D: last line of file ends without a newline
+  int getSpeed();
+shell.h(20): warning:  #1295-D: Deprecated declaration getSpeed - give arg types
+  int getSpeed();
+shell.c(163): warning:  #940-D: missing return statement at end of non-void function "getSpeed"
+        }
+shell.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=13384 RO-data=368 RW-data=380 ZI-data=3524  
+Program Size: Code=13396 RO-data=368 RW-data=380 ZI-data=4100  
 FromELF: creating hex file...
-".\GD3210C-OBJ\USBD-VCP.axf" - 0 Error(s), 2 Warning(s).
-_dcd.c...
-compiling usb_dcd_int.c...
-compiling usbd_core.c...
-compiling usbd_ctlx.c...
-compiling usbd_enum.c...
-compiling usbd_cdc_core.c...
-..\MDK-ARM\shell.h(17): warning:  #1-D: last line of file ends without a newline
-  int   putinbuffer(uint8_t     data);
-..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c(532): warning:  #177-D: variable "i" was declared but never referenced
-                int i;
-..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c: 2 warnings, 0 errors
-compiling can_init.c...
-..\MDK-ARM\shell.h(17): warning:  #1-D: last line of file ends without a newline
-  int   putinbuffer(uint8_t     data);
-src\can_init.c: 1 warning, 0 errors
-compiling hw_conf.c...
-compiling shell.c...
-shell.h(17): warning:  #1-D: last line of file ends without a newline
-  int   putinbuffer(uint8_t     data);
-shell.c(53): warning:  #177-D: variable "sdsl" was declared but never referenced
-                        char    sdsh,sdsl;
-shell.c: 2 warnings, 0 errors
-linking...
-.\GD3210C-OBJ\USBD-VCP.axf: Error: L6218E: Undefined symbol strhex (referred from shell.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
-".\GD3210C-OBJ\USBD-VCP.axf" - 1 Error(s), 7 Warning(s).
-Target not created
-  char    sdsh,sdsl;
-shell.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=13372 RO-data=368 RW-data=380 ZI-data=3076  
-FromELF: creating hex file...
-".\GD3210C-OBJ\USBD-VCP.axf" - 0 Error(s), 7 Warning(s).
+".\GD3210C-OBJ\USBD-VCP.axf" - 0 Error(s), 8 Warning(s).
 Load "C:\\Keil_project\\GD32CDC\\Project\\USB_Device_Examples\\VCP\\MDK-ARM\\GD3210C-OBJ\\USBD-VCP.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
-ctory
-  #include "gd3210c_eval.h" 
-..\..\..\..\Libraries\GD32_USB_Device_Library\Core\src\usbd_ctlx.c: 0 warnings, 1 error
-compiling usbd_enum.c...
-..\inc\usb_conf.h(17): error:  #5: cannot open source input file "gd3210c_eval.h": No such file or directory
-  #include "gd3210c_eval.h" 
-..\..\..\..\Libraries\GD32_USB_Device_Library\Core\src\usbd_enum.c: 0 warnings, 1 error
-compiling usbd_cdc_core.c...
-..\inc\usb_conf.h(17): error:  #5: cannot open source input file "gd3210c_eval.h": No such file or directory
-  #include "gd3210c_eval.h" 
-..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c: 0 warnings, 1 error
+</pre>
+</body>
+</html>
+raries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c(532): warning:  #177-D: variable "i" was declared but never referenced
+                int i;
+..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c: 4 warnings, 0 errors
 compiling system_gd32f10x.c...
-assembling startup_gd32f10x_cl.s...
 compiling gd32f10x_exmc.c...
 compiling gd32f10x_exti.c...
 compiling gd32f10x_gpio.c...
@@ -79,15 +53,33 @@ compiling gd32f10x_timer.c...
 compiling gd32f10x_pwr.c...
 compiling gd32f10x_can.c...
 compiling can_init.c...
-..\MDK-ARM\shell.h(31): warning:  #1-D: last line of file ends without a newline
-  int   putinbuffer(uint8_t     data);
-src\can_init.c: 1 warning, 0 errors
+..\MDK-ARM\shell.h(20): warning:  #1-D: last line of file ends without a newline
+  int getSpeed();
+..\MDK-ARM\shell.h(20): warning:  #1295-D: Deprecated declaration getSpeed - give arg types
+  int getSpeed();
+..\MDK-ARM\shell.h(20): warning:  #1-D: last line of file ends without a newline
+  int getSpeed();
+..\MDK-ARM\shell.h(20): warning:  #1295-D: Deprecated declaration getSpeed - give arg types
+  int getSpeed();
+src\can_init.c: 4 warnings, 0 errors
 compiling hw_conf.c...
 compiling shell.c...
-shell.h(31): warning:  #1-D: last line of file ends without a newline
-  int   putinbuffer(uint8_t     data);
-shell.c(332): warning:  #177-D: variable "sdsl" was declared but never referenced
-                        char    sdsh,sdsl;
-shell.c: 2 warnings, 0 errors
-".\GD3210C-OBJ\USBD-VCP.axf" - 12 Error(s), 3 Warning(s).
-Target not created
+shell.h(20): warning:  #1-D: last line of file ends without a newline
+  int getSpeed();
+shell.h(20): warning:  #1295-D: Deprecated declaration getSpeed - give arg types
+  int getSpeed();
+shell.c(165): warning:  #940-D: missing return statement at end of non-void function "getSpeed"
+        }
+shell.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=13552 RO-data=368 RW-data=380 ZI-data=4124  
+FromELF: creating hex file...
+".\GD3210C-OBJ\USBD-VCP.axf" - 0 Error(s), 16 Warning(s).
+Load "C:\\Keil_project\\GD32CDC\\Project\\USB_Device_Examples\\VCP\\MDK-ARM\\GD3210C-OBJ\\USBD-VCP.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Keil_project\\GD32CDC\\Project\\USB_Device_Examples\\VCP\\MDK-ARM\\GD3210C-OBJ\\USBD-VCP.axf" 
+Erase Done.
+Programming Done.
+Verify OK.

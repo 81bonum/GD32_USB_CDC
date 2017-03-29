@@ -45,8 +45,10 @@
 .\gd3210c-obj\app.o: ..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_desc.h
 .\gd3210c-obj\app.o: ..\inc\usbd_cdc_vcp.h
 .\gd3210c-obj\app.o: .\inc\can_init.h
-.\gd3210c-obj\app.o: ..\MDK-ARM\hw_config.h
 .\gd3210c-obj\app.o: ..\MDK-ARM\shell.h
 .\gd3210c-obj\app.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\stdlib.h
 .\gd3210c-obj\app.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\stdio.h
 .\gd3210c-obj\app.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\string.h
+.\gd3210c-obj\app.o: ..\MDK-ARM\hw_config.h
+.\gd3210c-obj\app.o: ..\MDK-ARM\shell.h
+.\gd3210c-obj\app.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\stdbool.h

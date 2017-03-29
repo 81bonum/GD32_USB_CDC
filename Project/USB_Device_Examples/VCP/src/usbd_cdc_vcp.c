@@ -24,6 +24,20 @@ LINE_CODING linecoding =
 extern uint8_t  APP_DATA_Buffer[];
 extern uint32_t AppBufInPtr;
 
+
+static uint16_t VCP_Init     (void);
+static uint16_t VCP_DeInit   (void);
+static uint16_t VCP_Ctrl     (uint32_t Cmd, uint8_t* Buf, uint32_t Len);
+
+CDC_IF_Prop_TypeDef VCP_fops = 
+{
+  VCP_Init,
+  VCP_DeInit,
+  VCP_Ctrl,
+  0,
+  0
+};
+
 /**
   * @brief  Handle the CDC device class requests
   * @param  Cmd: command code
@@ -31,7 +45,17 @@ extern uint32_t AppBufInPtr;
   * @param  Len: count of data to be sent (in bytes)
   * @retval USBD_OK
   */
-static uint16_t  VCP_Ctrl (uint8_t Cmd, uint8_t* CmdBuf, uint16_t Len)
+static uint16_t VCP_Init (void)
+{
+	return USBD_OK;
+}
+
+static uint16_t VCP_DeInit (void)
+{
+	return USBD_OK;
+}
+
+static uint16_t  VCP_Ctrl (uint32_t Cmd, uint8_t* CmdBuf, uint32_t Len)
 {
     switch (Cmd)
     {
@@ -74,7 +98,7 @@ static uint16_t  VCP_Ctrl (uint8_t Cmd, uint8_t* CmdBuf, uint16_t Len)
             break;
 
         case SET_CONTROL_LINE_STATE:
-						
+						/* No operation for this driver */
             break;
 
         case SEND_BREAK:
@@ -110,5 +134,8 @@ uint16_t CDC_DataTx (uint8_t* Buf, uint32_t Len)			//передача массива на ПК
 
 
 
-
 /************************ (C) COPYRIGHT 2014 GIGADEVICE *****END OF FILE****/
+
+
+
+

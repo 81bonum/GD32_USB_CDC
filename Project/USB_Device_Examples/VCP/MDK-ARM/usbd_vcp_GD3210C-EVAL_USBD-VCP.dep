@@ -1,5 +1,5 @@
 Dependencies for Project 'usbd_vcp', Target 'GD3210C-EVAL_USBD-VCP': (DO NOT MODIFY !)
-F (..\src\app.c)(0x58D23D3E)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\app.o --omf_browse .\gd3210c-obj\app.crf --depend .\gd3210c-obj\app.d)
+F (..\src\app.c)(0x58DB8891)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\app.o --omf_browse .\gd3210c-obj\app.crf --depend .\gd3210c-obj\app.d)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_rcc.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\CMSIS\gd32f10x.h)(0x58B4F50B)
 I (..\..\..\..\Libraries\CMSIS\core_cm3.h)(0x54DC3C35)
@@ -30,10 +30,10 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_sdio.h)(0x54DC3C
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_timer.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_usart.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C34)
-I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58C26DF6)
+I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58D8AEB4)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\inc\usb_conf.h)(0x58D1F8DC)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_core.h)(0x58C26ACD)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_dcd.h)(0x54DC3C35)
@@ -42,15 +42,16 @@ I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_regs.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_user.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_desc.h)(0x54DC3C35)
-I (..\inc\usbd_cdc_vcp.h)(0x58C141D1)
-I (.\inc\can_init.h)(0x58C242F8)
-I (..\MDK-ARM\hw_config.h)(0x58D1F15B)
-I (..\MDK-ARM\shell.h)(0x58D23B00)
+I (..\inc\usbd_cdc_vcp.h)(0x58D8D00E)
+I (.\inc\can_init.h)(0x58D4B89E)
+I (..\MDK-ARM\shell.h)(0x58DB70F1)
 I (C:\Keil_v4\ARM\ARMCC\include\stdlib.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\string.h)(0x51C7EF84)
-F (..\src\usbd_cdc_vcp.c)(0x58CF9923)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usbd_cdc_vcp.o --omf_browse .\gd3210c-obj\usbd_cdc_vcp.crf --depend .\gd3210c-obj\usbd_cdc_vcp.d)
-I (..\inc\usbd_cdc_vcp.h)(0x58C141D1)
+I (..\MDK-ARM\hw_config.h)(0x58D1F15B)
+I (C:\Keil_v4\ARM\ARMCC\include\stdbool.h)(0x51C7EF84)
+F (..\src\usbd_cdc_vcp.c)(0x58D8E0D5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usbd_cdc_vcp.o --omf_browse .\gd3210c-obj\usbd_cdc_vcp.crf --depend .\gd3210c-obj\usbd_cdc_vcp.d)
+I (..\inc\usbd_cdc_vcp.h)(0x58D8D00E)
 I (..\..\..\..\Libraries\CMSIS\gd32f10x.h)(0x58B4F50B)
 I (..\..\..\..\Libraries\CMSIS\core_cm3.h)(0x54DC3C35)
 I (C:\Keil_v4\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
@@ -81,10 +82,10 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_sdio.h)(0x54DC3C
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_timer.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_usart.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C34)
-I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58C26DF6)
+I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58D8AEB4)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\inc\usb_conf.h)(0x58D1F8DC)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_core.h)(0x58C26ACD)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_dcd.h)(0x54DC3C35)
@@ -129,7 +130,7 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_regs.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_desc.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_enum.h)(0x54DC3C35)
 F (..\src\usb_hwp.c)(0x550F9DEC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usb_hwp.o --omf_browse .\gd3210c-obj\usb_hwp.crf --depend .\gd3210c-obj\usb_hwp.d)
@@ -168,8 +169,8 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_usart.h)(0x54DC3
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_regs.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
-F (..\src\gd32f10x_it.c)(0x550F9DEC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\gd32f10x_it.o --omf_browse .\gd3210c-obj\gd32f10x_it.crf --depend .\gd3210c-obj\gd32f10x_it.d)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
+F (..\src\gd32f10x_it.c)(0x58D4F63A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\gd32f10x_it.o --omf_browse .\gd3210c-obj\gd32f10x_it.crf --depend .\gd3210c-obj\gd32f10x_it.d)
 I (..\inc\gd32f10x_it.h)(0x54DC3C2F)
 I (..\inc\usb_conf.h)(0x58D1F8DC)
 I (..\..\..\..\Libraries\CMSIS\gd32f10x.h)(0x58B4F50B)
@@ -208,8 +209,8 @@ I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_core.h)(0x58C26ACD)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_dcd.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
-I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58C26DF6)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
+I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58D8AEB4)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 F (..\..\..\..\Libraries\GD32_USB_OTG_Driver\src\usb_core.c)(0x550F9DF3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usb_core.o --omf_browse .\gd3210c-obj\usb_core.crf --depend .\gd3210c-obj\usb_core.d)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_core.h)(0x58C26AD1)
@@ -359,7 +360,7 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_regs.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_enum.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_dcd_int.h)(0x54DC3C35)
@@ -367,7 +368,7 @@ I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_hwp.h)(0x550F9DF3)
 F (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\src\usbd_ctlx.c)(0x54DC3C35)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usbd_ctlx.o --omf_browse .\gd3210c-obj\usbd_ctlx.crf --depend .\gd3210c-obj\usbd_ctlx.d)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\inc\usb_conf.h)(0x58D1F8DC)
 I (..\..\..\..\Libraries\CMSIS\gd32f10x.h)(0x58B4F50B)
 I (..\..\..\..\Libraries\CMSIS\core_cm3.h)(0x54DC3C35)
@@ -407,7 +408,7 @@ I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 F (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\src\usbd_enum.c)(0x54DC3C35)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usbd_enum.o --omf_browse .\gd3210c-obj\usbd_enum.crf --depend .\gd3210c-obj\usbd_enum.d)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_enum.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\inc\usb_conf.h)(0x58D1F8DC)
 I (..\..\..\..\Libraries\CMSIS\gd32f10x.h)(0x58B4F50B)
 I (..\..\..\..\Libraries\CMSIS\core_cm3.h)(0x54DC3C35)
@@ -446,11 +447,11 @@ I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_regs.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_desc.h)(0x54DC3C35)
-F (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c)(0x58CFA09F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usbd_cdc_core.o --omf_browse .\gd3210c-obj\usbd_cdc_core.crf --depend .\gd3210c-obj\usbd_cdc_core.d)
-I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58C26DF6)
+F (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\src\usbd_cdc_core.c)(0x58D8B801)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\usbd_cdc_core.o --omf_browse .\gd3210c-obj\usbd_cdc_core.crf --depend .\gd3210c-obj\usbd_cdc_core.d)
+I (..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc\usbd_cdc_core.h)(0x58D8AEB4)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_ctlx.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_def.h)(0x54DC3C35)
-I (..\inc\usbd_conf.h)(0x58D20107)
+I (..\inc\usbd_conf.h)(0x58D8CF0D)
 I (..\inc\usb_conf.h)(0x58D1F8DC)
 I (..\..\..\..\Libraries\CMSIS\gd32f10x.h)(0x58B4F50B)
 I (..\..\..\..\Libraries\CMSIS\core_cm3.h)(0x54DC3C35)
@@ -489,8 +490,8 @@ I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_regs.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc\usb_defines.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_desc.h)(0x54DC3C35)
 I (..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc\usbd_enum.h)(0x54DC3C35)
-I (..\inc\usbd_cdc_vcp.h)(0x58C141D1)
-I (..\MDK-ARM\shell.h)(0x58D23B00)
+I (..\inc\usbd_cdc_vcp.h)(0x58D8D00E)
+I (..\MDK-ARM\shell.h)(0x58DB70F1)
 I (C:\Keil_v4\ARM\ARMCC\include\stdlib.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\string.h)(0x51C7EF84)
@@ -837,8 +838,8 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_sdio.h)(0x54DC3C
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_timer.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_usart.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C34)
-I (.\inc\can_init.h)(0x58C242F8)
-I (..\MDK-ARM\shell.h)(0x58D23B00)
+I (.\inc\can_init.h)(0x58D4B89E)
+I (..\MDK-ARM\shell.h)(0x58DB70F1)
 I (C:\Keil_v4\ARM\ARMCC\include\stdlib.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\string.h)(0x51C7EF84)
@@ -874,8 +875,8 @@ I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_timer.h)(0x54DC3
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_usart.h)(0x54DC3C34)
 I (..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc\gd32f10x_wwdg.h)(0x54DC3C34)
 I (hw_config.h)(0x58D1F15B)
-F (.\shell.c)(0x58D23C29)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\shell.o --omf_browse .\gd3210c-obj\shell.crf --depend .\gd3210c-obj\shell.d)
-I (shell.h)(0x58D23B00)
+F (.\shell.c)(0x58DB8877)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\inc -I..\..\..\..\Libraries\GD32F10x_StdPeriph_Driver\inc -I..\..\..\..\Libraries\GD32_USB_OTG_Driver\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Core\inc -I..\..\..\..\Libraries\GD32_USB_Device_Library\Class\cdc\inc -I..\..\..\..\Utilities\GD32_EVAL\Common -I..\..\..\..\Utilities\GD32_EVAL\GD3210C_EVAL -I..\..\..\..\Libraries\CMSIS -I..\MDK-ARM -I.\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\GD\GD32F10x-DUSE_STDPERIPH_DRIVER -DGD32F10X_CL -DUSE_USB_OTG_FS -DGD32F10X_CL-o .\gd3210c-obj\shell.o --omf_browse .\gd3210c-obj\shell.crf --depend .\gd3210c-obj\shell.d)
+I (shell.h)(0x58DB70F1)
 I (C:\Keil_v4\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\stdlib.h)(0x51C7EF84)
 I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C7EF84)

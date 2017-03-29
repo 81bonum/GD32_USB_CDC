@@ -27,7 +27,6 @@ typedef struct
 }
 LINE_CODING;
 
-
 uint16_t CDC_DataTx (uint8_t* Buf, uint32_t Len);
 /* Exported constants --------------------------------------------------------*/
 

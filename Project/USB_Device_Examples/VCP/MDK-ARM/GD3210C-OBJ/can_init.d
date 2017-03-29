@@ -35,3 +35,4 @@
 .\gd3210c-obj\can_init.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\stdlib.h
 .\gd3210c-obj\can_init.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\stdio.h
 .\gd3210c-obj\can_init.o: C:\Keil_v4\ARM\ARMCC\bin\..\include\string.h
+.\gd3210c-obj\can_init.o: ..\MDK-ARM\shell.h

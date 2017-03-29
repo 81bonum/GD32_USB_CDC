@@ -26,6 +26,8 @@
 USB_OTG_CORE_HANDLE USB_OTG_dev;
 extern uint8_t USB_DATA_Buffer[USB_CDC_DATA_PACKET_SIZE];
 extern	int	can1_resive0;
+
+uint8_t interface_state = 0;
 /* Private functions ---------------------------------------------------------*/
 
 /**
@@ -41,17 +43,7 @@ void USB_Send_Data(uint8_t data)
 //тут надо что то сделать ! попробуем отдавать по одному
 	CDC_DataTx(USB_DATA_Buffer, 1);
 }
-//-------------------------------------------------------------------------------------------------------
-//выведем строку в виртуальный порт usb
-//пока не достигли конца строки вызываем USB_Send_Data, увеличивая указатель на элемент в строке
-//void	usb_out(char *pString)
-//{
-//	  while (*pString != 0x00)
-//	{ 
-//		USB_Send_Data(*pString++);		//положим символ в буфер, затем HOST заберёт его сам и отошлёт как 'эхо'
-//																	//но так как эта процедура из другой библиотеки, сделаем свою заглушку
-//	}
-//}
+
 
 
 
@@ -63,21 +55,17 @@ int main(void)
 			uint16_t Count = 0;
 			LEDs_init();
 			init_CAN();
-			bool flag = true;
-	
-			uint8_t end[3];
-			end[0] = 0x30;
-			end[1] = 0x0A;
-			end[2] = 0x0D;
-	
-			while(true)		
+			GPIOA->DOR^= GPIO_DOR_DOR5;
+			GPIOA->DOR^= GPIO_DOR_DOR4;
+			Delay(100);
+			GPIOA->DOR^= GPIO_DOR_DOR5;
+			GPIOA->DOR^= GPIO_DOR_DOR4;
+			
+			while(1)		
 				{		
-					//Delay(1000000);
-					if (flag) {
-						getConfPacked();
-						flag = false;
-						CDC_DataTx(end, 3);
-					}
+
+
+
 					//CDC_DataTx(end, 3);
 					/*if (can1_resive0 == 1)
 					{

@@ -104,7 +104,7 @@ void	printcan1(void)
 			
 	}
 //---------------------------------------------------------------------------------------------------
-	void getConfPacked(void)										
+ void getConfPacked(void)										
 	{
 		
 		inform[0].codePC = USB_DATA_Buffer[20];					// Номер ПК в сети		
@@ -128,6 +128,16 @@ void	printcan1(void)
 		
 		inform[0].crc = USB_DATA_Buffer[35];
 		
+		uint8_t end[3];
+			end[0] = 0x30;
+			end[1] = 0x0A;
+			end[2] = 0x0D;
+			
+			
+		if (inform[0].crc == 0xDF) {	
+			CDC_DataTx(end, 1);
+		}
+
 		
 //		for (int index = 0; index < 35; ++index) {
 //			USB_DATA_Buffer[index] = 0;
@@ -151,15 +161,83 @@ void	printcan1(void)
 			return 75;
 		}
 	}
+//---------------------------------------------------------------------------------------------------
+	
+#define RX_DATA_SIZE  1000
+#define TX_DATA_SIZE  1000
+
+	uint32_t WriteTxBufFS = 0;
+	uint32_t ReadTxBufFS = 0;
+
+
+uint8_t UserRxBufferFS[RX_DATA_SIZE];
+uint8_t UserTxBufferFS[TX_DATA_SIZE];
+extern 	uint8_t interface_state;
+
+	
+uint8_t CDC_add_buf_to_tranmsit(uint8_t* Buf, uint16_t Len)
+	{
+		uint16_t _cnt = Len;
+		
+		while(_cnt)
+		{
+			UserTxBufferFS[WriteTxBufFS] = *Buf;
+			WriteTxBufFS++;
+			Buf++;
+			WriteTxBufFS %= TX_DATA_SIZE;
+			_cnt--;
+		}
+		return(0);
+	}
+	
+uint8_t CDC_periodic_callback(void)										//переодическая проверка есть ли что на передачу
+{
+	uint32_t buffptr;
+	uint32_t buffsize;
+	
+	if (ReadTxBufFS != WriteTxBufFS)
+	{
+		__disable_irq();
+		if (ReadTxBufFS > WriteTxBufFS)
+		{
+			buffsize = TX_DATA_SIZE - ReadTxBufFS;
+		}
+		else
+		{
+			buffsize = WriteTxBufFS = ReadTxBufFS;
+		}
+		__enable_irq();
+		
+			buffptr = ReadTxBufFS;
+			
+			if(interface_state != 1) return(1);
+				
+			USBD_CDC_SetTxBuffer(hUsbDevice_0, (uint8_t*)&UserTxBufferFS[buffptr], buffsize);
+			
+			if(USBD_CDC_TransmitPacket(hUsbDevice_0) == USBD_OK)
+			{
+				ptrReadUserTxBufferFS += buffsize;
+				if (ptrReadUserTxBufferFS == APP_TX_DATA_SIZE)
+				{
+					ptrReadUserTxBufferFS = 0;
+				}
+			}
+	}
+}	
+	
+	
 	
 //---------------------------------------------------------------------------------------------------
-void Delay(uint32_t nTime)
+void Delay (uint32_t ms)
 {
-  TimingDelay = nTime;
-  while(TimingDelay != 0) {
-		TimingDelay -= 1;
-	}
+	volatile uint32_t nCount;
+	RCC_ClocksPara RCC_Clocks;
+	RCC_GetClocksFreq(&RCC_Clocks);
+  nCount=(RCC_Clocks.AHB_Frequency/10000)*ms;
+  for (; nCount!=0; nCount--);
+
 }
+
 //---------------------------------------------------------------------------------------------------
 
 

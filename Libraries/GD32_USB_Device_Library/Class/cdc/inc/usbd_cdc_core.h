@@ -67,13 +67,13 @@
   */
 typedef struct _CDC_IF_FOP
 {
-    uint16_t (*pIf_Init)     (uint8_t  Config);
+    uint16_t (*pIf_Init)     (void);
     uint16_t (*pIf_DeInit)   (void);
-    uint16_t (*pIf_Ctrl)     (uint8_t Cmd, uint8_t* CmdBuf, uint16_t Len);
-//    uint16_t (*pIf_DataTx)   (COM_TypeDef Com, uint8_t* DataBuf, uint16_t Len);
-//    uint16_t (*pIf_DataRx)   (COM_TypeDef Com, uint8_t* DataBuf, uint16_t Len);
+    uint16_t (*pIf_Ctrl)     (uint32_t Cmd, uint8_t* CmdBuf, uint32_t Len);
+		uint16_t (*pIf_DataTx)   (uint8_t* DataBuf, uint32_t Len);
+		uint16_t (*pIf_DataRx)   (uint8_t* DataBuf, uint32_t Len);
 }
-CDC_IF_Fop_TypeDef;
+CDC_IF_Prop_TypeDef;
 
 /**
   * @}

@@ -49,7 +49,7 @@
                                                 APP_RX_DATA_SIZE*8/MAX_BAUDARATE*1000 should be > CDC_IN_FRAME_INTERVAL */
 #endif /* USE_USB_OTG_HS */
 
-//#define APP_FOPS                        VCP_fops
+#define APP_FOPS                        VCP_fops
 
 /**
   * @}
